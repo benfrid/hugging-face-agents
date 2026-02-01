@@ -12,4 +12,15 @@ dependencies = [
 [dependency-groups]
 dev = [
     "pytest>=9.0.2",
+    "ruff>=0.14.14",
 ]
+
+[tool.ruff]
+# Match the line length most Python projects use
+line-length = 88
+target-version = "py314"
+
+[tool.ruff.lint]
+# Enable extra rules: 
+# E/F (standard), B (bugbear - finds common bugs), I (isort - sorts imports)
+select = ["E", "F", "B", "I"]
